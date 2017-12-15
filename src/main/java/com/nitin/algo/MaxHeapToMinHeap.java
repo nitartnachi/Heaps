@@ -12,8 +12,10 @@ public class MaxHeapToMinHeap {
 		
 		public MinHeap(int[] arr, int size) {
 			int i = (size - 2)/2;
-			while(i-- > 0)
+			while(i >= 0) {
 				Heapify(arr, i, size);
+				i--;
+			}
 		}
 
 		private void Heapify(int[] arr, int i, int size) {
